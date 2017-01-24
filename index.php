@@ -15,6 +15,17 @@ if (strlen($value) === 15) {
         $compteur ++;
     }
 }
-
 echo '<br> Le dico contient : '.$compteur.' mots à 15 caractères';
+
+//Combien de mots contiennent la lettre « w » ?
+
+$word_end_with_w=0;
+foreach ($dico as $value) {
+	$pos_end = strpos($value, "w");	
+	if (!$pos_end === false) {
+		$word_end_with_w++;
+	}
+}
+echo '<br>'.$word_end_with_w.'contiennent la lettre W';
+
 ?>
