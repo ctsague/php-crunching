@@ -5,7 +5,7 @@ $string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
 $dico = explode("\n", $string);
 
 $nb_mots_du_dico = count($dico);
-echo '<br>'.'Ce dictionnaire contient : '.$nb_mots_du_dico.' mots.';
+echo '<p>'.'Ce dictionnaire contient : '.$nb_mots_du_dico.' mots.<p>';
 
 //Combien de mots font exactement 15 caractères ?
 
@@ -15,7 +15,7 @@ if (strlen($value) === 15) {
         $compteur ++;
     }
 }
-echo '<br> Le dico contient : '.$compteur.' mots à 15 caractères';
+echo '<p> Le dico contient : '.$compteur.' mots à 15 caractères.<p>';
 
 //Combien de mots contiennent la lettre « w » ?
 
@@ -26,9 +26,17 @@ foreach ($dico as $value) {
 		$word_have_w++;
 	}
 }
-echo '<br>'.$word_have_w.'contiennent la lettre W';
+echo '<p>'.$word_have_w.' mots du dico contiennent la lettre w.<p>';
 
 //Combien de mots finissent par la lettre « q » ?
+	$count_p=0;
+foreach ($dico as $value) {
+	$p_at_end = substr($value, -1); 
+	if($p_at_end ==='p'){
+		$count_p++;
+	}	
+}
+echo '<p>'.$count_p.' mots du dico se terminent avec la lettre p.<p>';
 
 
 
