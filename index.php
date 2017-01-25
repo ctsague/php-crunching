@@ -29,14 +29,14 @@ foreach ($dico as $value) {
 echo '<p>'.$word_have_w.' mots du dico contiennent la lettre w.<p>';
 
 //Combien de mots finissent par la lettre « q » ?
-	$count_p=0;
+	$count_q=0;
 foreach ($dico as $value) {
-	$p_at_end = substr($value, -1); 
-	if($p_at_end ==='p'){
-		$count_p++;
+	$q_at_end = substr($value, -1); 
+	if($q_at_end ==='q'){
+		$count_q++;
 	}	
 }
-echo '<p>'.$count_p.' mots du dico se terminent avec la lettre p.<p>';
+echo '<p>'.$count_q.' mots du dico se terminent avec la lettre q.<p>';
 
 
 
